@@ -119,13 +119,25 @@ nav.navbar.bootsnav {
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #808080;
+    color: #4D4D4D;
     font-size: 20px;
     font-weight: 600;
     padding: 33px 0px 57px;
-    text-transform: uppercase;
 }
+
+.logo {
+    background-image: url('../images/about/Logo-rasapeduli.png'); /* Ganti 'logo.png' dengan path file logo Anda */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    width: 30px; /* Atur lebar logo */
+    height: 30px; /* Atur tinggi logo */
+    margin-right: 10px; /* Atur jarak antara logo dan teks */
+    vertical-align: middle;
+  }
 /*.navbar-brand*/
+
 
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
@@ -217,12 +229,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 }
 .header-text h2 span {color: #4D4D4D;}
 .header-text p {
-    color: #fff;
+    color: #717171;
     font-size: 20px;
     font-weight: 300;
-    text-transform: capitalize;
     margin: 30px 0 60px;
     letter-spacing: 1px;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .header-text a {
     width: 200px;
@@ -231,8 +244,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     border-radius: 3px;
     text-transform: capitalize;
     color: #fff;
-    background: #b636ff;
-    border:1px solid #b636ff;
+    background: #4CAF4F;
+    border:1px solid #4CAF4F;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
