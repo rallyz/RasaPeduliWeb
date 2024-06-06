@@ -285,6 +285,10 @@ nav.navbar.bootsnav {
     margin: 0;
 }
 
+.stats-icons .stat-item div {
+    margin-left: 25px;
+}
+
 /* Donate Section */
 .donate-section {
     padding: 60px 0;
