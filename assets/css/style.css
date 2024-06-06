@@ -227,31 +227,62 @@ nav.navbar.bootsnav {
     color: #333;
 }
 
+.stats-section .section-title.highlight {
+    color: #28a745; /* Warna hijau */
+}
+
 .stats-section .section-subtitle {
     font-size: 18px;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.stat-item {
-    margin-bottom: 30px;
+.stats-section .section-subtitle.small-text {
+    font-size: 14px; /* Mengurangi ukuran font */
 }
 
-.stat-item i {
+.stats-text {
+    text-align: left;
+}
+
+.stats-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-icons .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-icons .stat-item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.stats-icons .stat-item i {
     font-size: 40px;
     color: #28a745;
-    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
-.stat-item h3 {
+.stats-icons .stat-item h3 {
     font-size: 24px;
     font-weight: 600;
     color: #333;
+    margin: 0 10px 0 0;
 }
 
-.stat-item p {
+.stats-icons .stat-item p {
     font-size: 16px;
     color: #666;
+    margin: 0;
 }
 
 /* Donate Section */
