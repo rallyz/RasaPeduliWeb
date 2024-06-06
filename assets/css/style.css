@@ -126,8 +126,11 @@ nav.navbar.bootsnav {
 }
 
 .auth-buttons {
-    display: flex;
-    justify-content: flex-end; /* Untuk mengatur agar elemen berada di sebelah kanan */
+    display: inline-block;
+    padding:25px 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .auth-buttons a {
@@ -143,8 +146,225 @@ nav.navbar.bootsnav {
 
 .auth-buttons .signup {
     background-color: #28a745;
-    margin-right: 0; /* Menghapus margin kanan */
+    margin-right: 0px;
 }
+
+.partners-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.partners-section .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.partners-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.partner-logo {
+    margin-bottom: 30px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Partner Section */
+.partners-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.partners-section .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.partners-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.partner-logo {
+    margin-bottom: 30px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 60px 0;
+    background-color: #e9ecef;
+}
+
+.stats-section .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stats-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    margin-bottom: 30px;
+}
+
+.stat-item i {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.stat-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Donate Section */
+.donate-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.donate-section .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.donate-section .section -subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.donate-section .btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.donate-section .btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+/* News Section */
+.news-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.news-section .section-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.news-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-item .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.news-item .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Donate Button Section */
+.donate-button-section {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+}
+
+.donate-button-section .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button-section .btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+
 
 
 
