@@ -1,213 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RasaPeduli</title>
-    <link rel="stylesheet" href="assets/css/donasi.style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+    <!--font-family-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext"
+      rel="stylesheet"
+    />
+
+    <!-- For favicon png -->
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="assets/images/about/Logo-rasapeduli.png"
+    />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!--flat icon css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" />
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" />
+
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="stylesheet" href="assets/css/donasi.style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-</head>
-<body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">RasaPeduli</a>
+  </head>
+
+  <body>
+    <header class="top-area">
+      <div class="header-area">
+        <nav
+          class="navbar navbar-default bootsnav navbar-fixed dark no-background"
+        >
+          <div class="container">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#navbar-menu"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <span class="logo"></span>RasaPeduli
+              </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="donasi.html">Donasi</a></li>
-                    <li><a href="pembayaran.html">Pembayaran</a></li>
-                    <li><a href="#">Testimoni</a></li>
-                    <li><a href="#">Pelayanan</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="#" class="signup">Pengguna</a>
+            <div
+              class="collapse navbar-collapse menu-ui-design"
+              id="navbar-menu"
+            >
+              <ul
+                class="nav navbar-nav navbar-center"
+                data-in="fadeInDown"
+                data-out="fadeOutUp"
+              >
+                <li class="smooth-menu"><a href="index.html">Home</a></li>
+                <li class="smooth-menu"><a href="donasi.html">Donasi</a></li>
+                <li class="smooth-menu">
+                  <a href="pembayaran.html">Pembayaran</a>
+                </li>
+                <li class="smooth-menu"><a href="#">Testimoni</a></li>
+                <li class="smooth-menu"><a href="#">Pelayanan</a></li>
+                <div class="auth-buttons ml-auto">
+                  <a href="#" class="signup">Pengguna</a>
+                </div>
+              </ul>
             </div>
-        </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="donation-page">
-        <div class="container">
-            <h1>Daerah Yang Memerlukan Donasi</h1>
-            <div class="breadcrumb">
-                <span>Kabupaten / Daerah</span> / <span>Sumatera Utara</span>
-            </div>
-            <div class="donation-content">
-                <div id="map" class="map"></div>
-                <div class="region-list">
-                    <div class="region-item active">
-                        <img src="assets/images/donate1.png" alt="Kabupaten Samosir">
-                        <div class="region-info">
-                            <h2>Kabupaten Palu, Sulawesi Selatan</h2>
-                            <p>14 Daerah memerlukan donasi</p>
-                        </div>
-                    </div>
-                    <div class="region-item">
-                        <img src="images/sample2.jpg" alt="Kabupaten Padang Lawas Utara">
-                        <div class="region-info">
-                            <h2>Kabupaten Padang Lawas Utara, Sumatera Utara</h2>
-                            <p>50 Daerah memerlukan donasi</p>
-                        </div>
-                    </div>
-                    <div class="region-item">
-                        <img src="images/sample3.jpg" alt="Kabupaten Padang Lawas">
-                        <div class="region-info">
-                            <h2>Kabupaten Padang Lawas, Sumatera Utara</h2>
-                            <p>29 Daerah memerlukan donasi</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'dsp')">Donasi Patungan</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
-
-<div id="dsp" class="tabcontent">
-  <div class="donation-details">
-                    <h2>Donasi Untuk</h2>
-                    <h3>Kabupaten Samosir, Sumatera Utara</h3>
-                    <p><strong>Rp 18.789.201</strong> terkumpul dari 101 donatur</p>
-                    <input type="text" placeholder="Masukkan Nominal Transaksi*">
-                    <div class="donation-buttons">
-                        <button>Rp25.000</button>
-                        <button>Rp50.000</button>
-                        <button>Rp100.000</button>
-                        <button>Rp250.000</button>
-                    </div>
-                    <button class="payment-button">Pilih Pembayaran</button>
-                </div>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+      <div class="container">
+        <h1>Daerah Yang Memerlukan Donasi</h1>
+        <div class="breadcrumb">
+          <span>Kabupaten / Daerah</span> / <span>Sumatera Utara</span>
         </div>
+        <div class="donation-content">
+          <div id="map" class="map"></div>
+          <div class="region-list">
+            <div class="region-item active">
+              <img src="assets/images/donate1.png" alt="Kabupaten Samosir" />
+              <div class="region-info">
+                <h2>Kabupaten Palu, Sulawesi Selatan</h2>
+                <p>14 Daerah memerlukan donasi</p>
+              </div>
+            </div>
+            <div class="region-item">
+              <img
+                src="images/sample2.jpg"
+                alt="Kabupaten Padang Lawas Utara"
+              />
+              <div class="region-info">
+                <h2>Kabupaten Padang Lawas Utara, Sumatera Utara</h2>
+                <p>50 Daerah memerlukan donasi</p>
+              </div>
+            </div>
+            <div class="region-item">
+              <img src="images/sample3.jpg" alt="Kabupaten Padang Lawas" />
+              <div class="region-info">
+                <h2>Kabupaten Padang Lawas, Sumatera Utara</h2>
+                <p>29 Daerah memerlukan donasi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'dsp')">
+            Donasi Patungan
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            Paris
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            Tokyo
+          </button>
+        </div>
+
+        <div id="dsp" class="tabcontent">
+          <div class="donation-details">
+            <h2>Donasi Untuk</h2>
+            <h3>Kabupaten Samosir, Sumatera Utara</h3>
+            <p><strong>Rp 18.789.201</strong> terkumpul dari 101 donatur</p>
+            <input type="text" placeholder="Masukkan Nominal Transaksi*" />
+            <div class="donation-buttons">
+              <button>Rp25.000</button>
+              <button>Rp50.000</button>
+              <button>Rp100.000</button>
+              <button>Rp250.000</button>
+            </div>
+            <button class="payment-button">Pilih Pembayaran</button>
+          </div>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h3>Paris</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Tokyo</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(
+                " active",
+                "",
+              );
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+        </script>
+      </div>
     </main>
 
     <footer>
-			<div class="container footer-content">
-				<div class="footer-grid">
-					<div class="footer-logo">
-						<span class="logo"></span>RasaPeduli
-						<p>&copy; 2023 RasaPeduli. All rights reserved.</p>
-					</div>
-					<div class="footer-links">
-						<h3>Lembaga</h3>
-						<ul>
-							<li><a href="#">Mengenai Kami</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Kontak Kami</a></li>
-							<li><a href="#">Pembayaran</a></li>
-							<li><a href="#">Testimoni</a></li>
-						</ul>
-					</div>
-					<div class="footer-links">
-						<h3>Pelayanan</h3>
-						<ul>
-							<li><a href="#">Help Center</a></li>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Legal</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Status</a></li>
-						</ul>
-					</div>
-					<div class="footer-subscribe">
-						<h3>Stay up to date</h3>
-						<input type="email" placeholder="Masukkan email anda">
-						<button>Subscribe</button>
-						<div class="social-icons">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-							<a href="#"><i class="fa fa-youtube"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+      <div class="container footer-content">
+        <div class="footer-grid">
+          <div class="footer-logo">
+            <span class="logo"></span>RasaPeduli
+            <p>&copy; 2023 RasaPeduli. All rights reserved.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Lembaga</h3>
+            <ul>
+              <li><a href="#">Mengenai Kami</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Kontak Kami</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">Testimoni</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Pelayanan</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Status</a></li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h3>Stay up to date</h3>
+            <input type="email" placeholder="Masukkan email anda" />
+            <button>Subscribe</button>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		
-		<!--footer-copyright end-->
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+    <!--footer-copyright end-->
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-		
-		<!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-		
-		<!-- for progress bar start-->
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-		<!-- progressbar js -->
-		<script src="assets/js/progressbar.js"></script>
+    <script src="assets/js/jquery.js"></script>
 
-		<!-- appear js -->
-		<script src="assets/js/jquery.appear.js"></script>
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-		<!-- for progress bar end -->
+    <!--bootstrap.min.js-->
+    <script src="assets/js/bootstrap.min.js"></script>
 
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- bootsnav js -->
+    <script src="assets/js/bootsnav.js"></script>
 
+    <!-- jquery.sticky.js -->
+    <script src="assets/js/jquery.sticky.js"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
-        
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
+    <!-- for progress bar start-->
+
+    <!-- progressbar js -->
+    <script src="assets/js/progressbar.js"></script>
+
+    <!-- appear js -->
+    <script src="assets/js/jquery.appear.js"></script>
+
+    <!-- for progress bar end -->
+
+    <!--owl.carousel.js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="assets/js/custom.js"></script>
+  </body>
 </html>
-    <script>
-        var map = L.map('map').setView([2.5523, 98.5833], 10); // Contoh koordinat Sumatera Utara
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-        }).addTo(map);
+<script>
+  var map = L.map("map").setView([2.5523, 98.5833], 10); // Contoh koordinat Sumatera Utara
 
-        // Contoh marker
-        L.marker([2.5523, 98.5833]).addTo(map)
-            .bindPopup('Kabupaten Samosir')
-            .openPopup();
-    </script>
-</body>
-</html>
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+  }).addTo(map);
+
+  // Contoh marker
+  L.marker([2.5523, 98.5833])
+    .addTo(map)
+    .bindPopup("Kabupaten Samosir")
+    .openPopup();
+</script>
